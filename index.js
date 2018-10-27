@@ -13,13 +13,13 @@ class Farm {
     // return this.crops
     // .map(crop => crop.getYieldInEuros())
     // .reduce((a,b) => a + b, 0)
-    const incomeCrop = this.crops
+    const cropIncome = this.crops
       .map(crop => crop.getYieldInEuros())
       .reduce((a, b) => a + b, 0)
-    const incomeAnimal = this.animals
+    const animalIncome = this.animals
       .map(animal => animal.getValueInEuros())
       .reduce((a, b) => a + b, 0)
-    return incomeCrop + incomeAnimal
+    return cropIncome + animalIncome
   }
 
   addAnimal(animal) {
